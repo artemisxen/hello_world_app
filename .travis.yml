@@ -3,3 +3,13 @@ language: ruby
 rvm: 2.4.1
 
 script: bundle exec rspec
+
+services:
+  - docker
+
+before_install:
+  - docker build -t helloworld .
+  - docker run helloworld rspec
+
+script:
+  - bundle exec rspec
