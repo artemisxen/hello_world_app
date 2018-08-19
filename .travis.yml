@@ -5,9 +5,3 @@ before_install:
 - docker build -t helloworld .
 script:
 - docker run helloworld rspec
-deploy:
-  provider: heroku
-  app: hello-world-app-staging
-  api_key:
-    secure: KB+Q3U9luVOzJDNbsVHLWOrHa4MR/HGVWZrcyUNbgq3IHBP1XciYpp7e5Jpv1wC6zDimbRatOJz2GfgH4zndwxJe7MnqNFrY2daJp0IOiaFmXbkutYZ1uVV3602wkkoBiXCTuyojY+zgXuNTG0Am1bZxaPyQOTv7be54rCGePony2AEuxCGt0rihivNhy6DRtDMAKNeoI0ZR9WDDqPWRNt6iGwQbLETo31sf0cly0b/DKmgzDTm1ZfqD1IBkSYIbX8WxuG/jmGZp6n2SUlFLZxruenNGOjw3dqWSsDdwBshcaBZuhOQdKMXty2LQ9bz33OiIkZM30/gNlwgb4uwBO7M2cb5PkkAvebqpjf/iiQICShJ+luzAxlSmKJSBing5pOeOYG0EgdO5zVuoSiYI2X9cBE4du6Hdn46JEFxAXmfQUMv93tpg18edN46ZA9Zkli+FIDabfvwM9Gd2DAsgIaxTHRVV7nY6/ZSJBpDTTLWD1ccIoU2UWeapAsWDZgwT8V2nTR8LX5FfQkf9vClX6oQqdTiEu4SJfOLpBDnpo3sS4v8Uw4ItVwvTAPIhBezL/d0fiB9NaGDSShe/dyr7Bgtrm7LBsC2HfCr1pVD4sLnRkLg14L5/IhmlXoVXi5+7g/Pls+Fqn2HVPYcGrmVKJbv/kDz6FFFBsX+1sHsUqBY=
-  on: master
