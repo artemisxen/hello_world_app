@@ -1,10 +1,16 @@
 language: ruby
 
 services:
-  - docker
+- docker
 
 before_install:
-  - docker build -t helloworld .
+- docker build -t helloworld .
 
 script:
-  - docker run helloworld rspec
+- docker run helloworld rspec
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: 4la8L2nGFUgkRJxBejv60zEsJqW101X19P5VCMTE3IKbSHxR++gImkEnuJCTRdSErd9r7HznaNZZRB1WnE/wmOYrjpA41dEtcN0/kvwIG2k1WaQK0bOJY9yahUw2EJSUkn0Lcm6sOApv1+6sP9DRuRDodlotGhN5Ls8zd0sY1pzOX4MtPL87n3PZ1UsYwVC9gf+za7tyHWoYiOGXMeczH5PEEMtEsdAIo8/lMBmmEvJZUYC7DwfF8/nBAvt65s8Qa0IddJ4Euv8R4tWhfhDHqYqXJWNzF3A2nptRX7sNzE0QWUrFwZ2bFO7jYe99o9Dy4P9swU6S6sw+8pk74tRZjNPBOUpUQl1MFEGy0Z3ATx/zy5tv6Jc8vISPGnONzXaGbXd90vtzqdeySohqTDofllG2FjDuaroWNbq2vrFRJouvBSwihSXfBiBwhvijeM0E10xUi87sM1BJXkSIWzPfC3WWWLWKAVIKhRoISmF41g4QRaByhs6c9EZjNP40o57Y0djg+am/vgJpW8myv5Rdyr911hGI305Y3Um8vuLzkv6UejN1xktga2+B6XxGSZFdjVPkXYAp15l/gTeZGK+fWkr7h3tQ7E0arp4qAHFqcgw3LWEPfzboPzvO6FVVmjLWr6KcVfSM6gN2Te27u5t662SFRZBnj3lURrR7hhDT/5Q=
+  on: staging    
