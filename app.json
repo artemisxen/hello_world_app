@@ -1,16 +1,10 @@
 {
-  "name": "hello_world_app",
-  "scripts": {},
-  "env": {},
-  "formation": {
-    "web": {
-      "quantity": 1
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "bundle install",
+        "test": "bundle exec rspec"
+      }
     }
-  },
-  "addons": [],
-  "buildpacks": [
-    {
-      "url": "heroku/ruby"
-    }
-  ]
+  }
 }
