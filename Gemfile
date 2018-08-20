@@ -1,9 +1,9 @@
-# frozen_string_literal: true
-
+ruby "2.5.1"
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+group :test do
+  gem 'rspec', '~>3.8.0'
+  gem 'rack-test', '~>1.1.0'
+end
 
-gem 'rspec'
-gem 'rack-test'
-gem 'sinatra'
+gem 'sinatra', '~>2.0.3'

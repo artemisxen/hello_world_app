@@ -7,6 +7,41 @@ A simple app to practise with the deployment process:
 - Travis CI
 - Deployed to Heroku
 
+## Development
+
+### Requirements
+
+- Docker + docker-compose
+
+### Set up
+
+```
+git clone https://github.com/artemisxen/hello_world_app.git
+docker-compose up
+```
+
+This will launch a web service listening to http://localhost:9292/welcome
+
+
+## Test
+
+### Requirements
+
+- Docker + docker-compose
+
+### Run tests
+
+```
+docker-compose run --rm web bundle exec rspec
+```
+
+## Production
+
+### Requirements
+
+- Ruby >= 2.5.1
+
+
 ## Instructions
 ``` bash
 git clone https://github.com/artemisxen/hello_world_app.git
