@@ -12,4 +12,4 @@ RUN bundle install
 
 COPY . /app
 
-CMD ['rspec', 'rackup']
+CMD ['rackup']
