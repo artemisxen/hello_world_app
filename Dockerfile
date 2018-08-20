@@ -12,4 +12,6 @@ RUN bundle install
 
 COPY . /app
 
-CMD ['rackup']
+EXPOSE 9292
+
+CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "9292"]
