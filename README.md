@@ -2,7 +2,7 @@
 
 A simple app to practise with the deployment process:
 - TDD with RSpec
-- Use Sinatra
+- Sinatra
 - Dockerized
 - Travis CI
 - Deployed to Heroku
@@ -22,13 +22,6 @@ docker-compose up
 
 This will launch a web service listening to http://localhost:9292/welcome
 
-
-## Test
-
-### Requirements
-
-- Docker + docker-compose
-
 ### Run tests
 
 ```
@@ -41,20 +34,19 @@ docker-compose run --rm web bundle exec rspec
 
 - Ruby >= 2.5.1
 
-
-## Instructions
-``` bash
+## Set up
+```
 git clone https://github.com/artemisxen/hello_world_app.git
 bundle install
-rackup
+bundle exec rerun rackup
 ```
 
-Visit http://localhost:9292/welcome
+This will launch a web service listening to http://localhost:9292/welcome
 
-In heroku:
+Heroku:
 https://my-hello-world-app.herokuapp.com/welcome
 
-Run the specs
-``` bash
+### Run tests
+```
 bundle exec rspec
 ```
