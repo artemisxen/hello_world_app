@@ -16,6 +16,6 @@ describe 'Hello World App' do
   it 'says Hello Wolrd' do
     get '/welcome'
 
-    expect(last_response.body).to eq 'Hello World'
+    expect(last_response.body).to eq 'Hello World!'
   end
 end
